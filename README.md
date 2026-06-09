@@ -4,7 +4,7 @@ Repositorio creado para almacenar los ejercicios realizados en la materia de Min
 
 ## Autor
 
-Victor Campos Sánchez
+Victor Abraham Campos Sanchez
 
 ## Enlaces
 
