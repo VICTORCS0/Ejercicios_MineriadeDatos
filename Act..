@@ -1,0 +1,11 @@
+#22-Mayo-2026
+
+respuestaUsuario = input("¿Como te llamas?")
+print("Su nombre es:", respuestaUsuario)
+print(type(respuestaUsuario))
+
+respuestaUsuario = input("¿Cual es tu edad?")
+print(type(respuestaUsuario))
+respuestaUsuario = int(respuestaUsuario)
+print("Su edad es:", respuestaUsuario)
+print(type(respuestaUsuario))
