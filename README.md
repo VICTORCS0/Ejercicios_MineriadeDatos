@@ -12,7 +12,7 @@ Victor Campos Sánchez
 
 ## Contenido
 
-- Ej_TiposDatos.ipynb
+- [Ej_TiposDatos.ipynb](https://github.com/VICTORCS0/Ejercicios_MineriadeDatos/blob/main/Ej_TiposDatos.ipynb)
 
 ## Actividades
 
