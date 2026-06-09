@@ -1,0 +1,104 @@
+import pandas as pd
+
+datos = pd.read_csv("calificaciones.csv")
+
+print(datos)
+
+
+
+import csv
+
+archivo = open("calificaciones.csv", "r")
+lector = csv.reader(archivo)
+
+next(lector)  # Saltar encabezados
+
+suma_promedios = 0
+cantidad_alumnos = 0
+
+for fila in lector:
+    nombre = fila[1]
+
+    parcial1 = float(fila[3])
+    parcial2 = float(fila[4])
+    parcial3 = float(fila[5])
+
+    promedio = (parcial1 + parcial2 + parcial3) / 3
+
+    print(nombre, "Promedio:", promedio)
+
+    suma_promedios = suma_promedios + promedio
+    cantidad_alumnos = cantidad_alumnos + 1
+
+promedio_general = suma_promedios / cantidad_alumnos
+
+print("Promedio general:", promedio_general)
+
+archivo.close()
+
+
+
+import csv
+
+archivo = open("calificaciones.csv", "r")
+lector = csv.reader(archivo)
+
+next(lector)
+
+mejor_nombre = ""
+mejor_promedio = 0
+
+peor_nombre = ""
+peor_promedio = 100
+
+for fila in lector:
+    nombre = fila[1]
+
+    p1 = float(fila[3])
+    p2 = float(fila[4])
+    p3 = float(fila[5])
+
+    promedio = (p1 + p2 + p3) / 3
+
+    if promedio > mejor_promedio:
+        mejor_promedio = promedio
+        mejor_nombre = nombre
+
+    if promedio < peor_promedio:
+        peor_promedio = promedio
+        peor_nombre = nombre
+
+print("Mejor alumno:", mejor_nombre, mejor_promedio)
+print("Peor alumno:", peor_nombre, peor_promedio)
+
+archivo.close()
+
+
+
+import csv
+
+archivo = open("calificaciones.csv", "r")
+lector = csv.reader(archivo)
+
+next(lector)
+
+aprobados = 0
+reprobados = 0
+
+for fila in lector:
+
+    p1 = float(fila[3])
+    p2 = float(fila[4])
+    p3 = float(fila[5])
+
+    promedio = (p1 + p2 + p3) / 3
+
+    if promedio >= 70:
+        aprobados = aprobados + 1
+    else:
+        reprobados = reprobados + 1
+
+print("Aprobados:", aprobados)
+print("Reprobados:", reprobados)
+
+archivo.close()
