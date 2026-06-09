@@ -1,0 +1,21 @@
+# Lista
+materias = ["Mineria de Datos", "Seguridad Informatica", "Formulacion de Proyectos", "Desarrollo para Moviles"]
+print("Materias del cuatrimestre:", materias)
+
+# Tupla
+coordenadas = (15, 30)
+print("Coordenadas:", coordenadas)
+
+# Diccionario
+empleado = {
+    "nombre": "Victor",
+    "edad": 20,
+    "activo": True
+}
+print("Datos del empleado:", empleado)
+
+#print
+numero1 = 10
+numero2 = 5
+print("Suma:", numero1 + numero2)
+print("Multiplicación:", numero1 * numero2)
