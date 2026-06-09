@@ -1,0 +1,5 @@
+numeros = [10,20,30,40,50]
+suma = 0
+for numero in numeros:
+  suma = suma + numero
+print("La suma es:" + str(suma))
