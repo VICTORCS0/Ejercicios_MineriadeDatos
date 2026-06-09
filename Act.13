@@ -1,0 +1,4 @@
+frutas = ["manzana", "pera", "manzana", "uva", "manzana"]
+
+for fruta in set(frutas):
+    print(fruta, ":", frutas.count(fruta))
