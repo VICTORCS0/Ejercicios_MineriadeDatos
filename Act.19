@@ -1,0 +1,13 @@
+import math
+
+def area_circulo(radio):
+    return math.pi * radio ** 2
+
+def volumen_cilindro(radio, altura):
+    return area_circulo(radio) * altura
+
+radio = float(input("Radio: "))
+altura = float(input("Altura: "))
+
+print("Área del círculo:", area_circulo(radio))
+print("Volumen del cilindro:", volumen_cilindro(radio, altura))
