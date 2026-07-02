@@ -41,3 +41,4 @@ Victor Abraham Campos Sanchez
 ## Actividades 2do Parcial
 
 - [Actividad 1](https://github.com/VICTORCS0/Ejercicios_MineriadeDatos/blob/main/Act.1%20(2Parcial))
+- [Actividad 1.1](https://github.com/VICTORCS0/Ejercicios_MineriadeDatos/blob/main/Act1.1%20(2Parcial)
