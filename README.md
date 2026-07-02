@@ -14,7 +14,7 @@ Victor Abraham Campos Sanchez
 
 - [Ej_TiposDatos.ipynb](https://github.com/VICTORCS0/Ejercicios_MineriadeDatos/blob/main/Ej_TiposDatos.ipynb)
 
-## Actividades
+## Actividades 1er Parcial
 
 - [Actividad 1](https://github.com/VICTORCS0/Ejercicios_MineriadeDatos/blob/main/Act.1)
 - [Actividad 2](https://github.com/VICTORCS0/Ejercicios_MineriadeDatos/blob/main/Act.2)
@@ -37,3 +37,7 @@ Victor Abraham Campos Sanchez
 - [Actividad 19](https://github.com/VICTORCS0/Ejercicios_MineriadeDatos/blob/main/Act.19)
 - [Actividad 20](https://github.com/VICTORCS0/Ejercicios_MineriadeDatos/blob/main/Act.20)
 - [Actividad 21](https://github.com/VICTORCS0/Ejercicios_MineriadeDatos/blob/main/Act.21)
+
+## Actividades 2do Parcial
+
+- [Actividad 1](https://github.com/VICTORCS0/Ejercicios_MineriadeDatos/blob/main/Act.1%20(2Parcial))
