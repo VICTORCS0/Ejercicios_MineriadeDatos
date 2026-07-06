@@ -1,0 +1,49 @@
+#Practica 4
+
+#Tabla de Dispercion Horas de estudio vs Calificacion Final
+
+plt.scatter(df["Horas_Estudio"], df["Calificacion_Final"])
+plt.xlabel("Horas de estudio")
+plt.ylabel("Calificación Final")
+plt.title("Horas de Estudio vs Calificación Final")
+plt.show()
+
+#Tabla de Dispercion Asistencia vs Calificacion Final
+
+plt.scatter(df["Asistencia"], df["Calificacion_Final"])
+plt.xlabel("Asistencia")
+plt.ylabel("Calificación Final")
+plt.title("Asistencia vs Calificación Final")
+plt.show()
+
+#Tabla de Dispercion Tareas vs Calificacion Final
+
+plt.scatter(df["Tareas"], df["Calificacion_Final"])
+plt.xlabel("Tareas")
+plt.ylabel("Calificación Final")
+plt.title("Tareas vs Calificación Final")
+plt.show()
+
+#Tabla de Dispercion Examen vs Calificacion Final
+
+plt.scatter(df["Examen"], df["Calificacion_Final"])
+plt.xlabel("Examen")
+plt.ylabel("Calificación Final")
+plt.title("Examen vs Calificación Final")
+plt.show()
+
+#Tabla de Dispercion Examen vs Calificacion Final
+
+plt.scatter(df["Edad"], df["Calificacion_Final"])
+plt.xlabel("Edad")
+plt.ylabel("Calificación Final")
+plt.title("Edad vs Calificación Final")
+plt.show()
+
+#Tabla de Dispercion Matricula vs Calificacion Final
+
+plt.scatter(df["Matricula"], df["Calificacion_Final"])
+plt.xlabel("Matricula")
+plt.ylabel("Calificación Final")
+plt.title("Matricula vs Calificación Final")
+plt.show()
