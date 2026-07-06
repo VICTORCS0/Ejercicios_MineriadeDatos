@@ -47,3 +47,32 @@ plt.xlabel("Matricula")
 plt.ylabel("Calificación Final")
 plt.title("Matricula vs Calificación Final")
 plt.show()
+
+
+
+#Practica 4 (Tarea)
+
+#Grafica de Barras (Asistencia)
+
+plt.bar(df["Nombre"], df["Asistencia"])
+plt.xlabel("Estudiante")
+plt.ylabel("Asistencias")
+plt.title("Asistencias por estudiante")
+plt.xticks(rotation=90)
+plt.tight_layout()
+plt.show()
+
+#Histograma (Tareas)
+
+plt.hist(df["Tareas"], bins=5)
+plt.xlabel("Calificación de tareas")
+plt.ylabel("Cantidad de estudiantes")
+plt.title("Calificaciones de tareas")
+plt.show()
+
+#Boxplot
+
+plt.boxplot(df["Examen"])
+plt.ylabel("Calificación del examen")
+plt.title("Calificaciones del examen")
+plt.show()
