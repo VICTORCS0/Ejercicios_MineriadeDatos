@@ -44,3 +44,4 @@ Victor Abraham Campos Sanchez
 - [Actividad 2](https://github.com/VICTORCS0/Ejercicios_MineriadeDatos/blob/main/Act.2%20(2Parcial))
 - [Actividad 3](https://github.com/VICTORCS0/Ejercicios_MineriadeDatos/blob/main/Act.3%20(2Parcial))
 - [Actividad 4](https://github.com/VICTORCS0/Ejercicios_MineriadeDatos/blob/main/Act.4%20(2Parcial))
+- [Actividad 4](https://github.com/VICTORCS0/Ejercicios_MineriadeDatos/blob/main/Practica%205%20Diagrama%20de%20decisiones.drawio.png)
