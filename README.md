@@ -52,7 +52,7 @@ Victor Abraham Campos Sanchez
 ## Actividades 3er Parcial
 
 - [Actividad 1](https://github.com/VICTORCS0/Ejercicios_MineriadeDatos/blob/main/Act.1%20(3Parcial))
-- [Actividad 1.1]([https://github.com/VICTORCS0/Ejercicios_MineriadeDatos/blob/main/Act.1%20(3Parcial)](https://github.com/VICTORCS0/Ejercicios_MineriadeDatos/blob/main/M_codo.png))
+- [Actividad 1.1](([https://github.com/VICTORCS0/Ejercicios_MineriadeDatos/blob/main/Act.1%20(3Parcial)](https://github.com/VICTORCS0/Ejercicios_MineriadeDatos/blob/main/M_codo.png)))
 
 
 
