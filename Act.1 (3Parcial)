@@ -76,3 +76,8 @@ Cluster
 1                 2.441860        1961.445814               5.186047
 2                12.980392       17181.416863              30.843137
 
+Interpretación:
+El modelo K-Means agrupó a los clientes en tres segmentos.
+Cluster 0: Clientes con actividad y gasto medios.
+Cluster 1: Clientes con pocas compras, bajo gasto y pocas visitas al sitio web.
+Cluster 2: Clientes frecuentes, con alto gasto y mayor número de visitas, siendo el segmento de mayor valor.
