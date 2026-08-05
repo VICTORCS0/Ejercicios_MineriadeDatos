@@ -1,0 +1,202 @@
+#Practica 2
+
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.neural_network import MLPClassifier
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+
+df = pd.read_csv("clientes (1).csv")
+print("Primeras filas del dataset:")
+print(df.head())
+#print("\nInformación del dataset:")
+#print(df.info())
+
+X = df[[
+    "Compras_Mensuales",
+    "Gasto_Mensual_MXN",
+    "Visitas_Web_Mensuales",
+    "Satisfaccion"
+]]
+
+y = df["Nivel_Consumo_Referencia"]
+
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X,
+    y,
+    test_size=0.3,
+    random_state=42
+)
+
+escalador = StandardScaler()
+
+X_train_escalado = escalador.fit_transform(X_train)
+X_test_escalado = escalador.transform(X_test)
+
+modelo = MLPClassifier(
+    hidden_layer_sizes=(8, 6),
+    activation="relu",
+    max_iter=1000,
+    random_state=42
+)
+
+modelo.fit(X_train_escalado, y_train)
+
+predicciones = modelo.predict(X_test_escalado)
+
+exactitud = accuracy_score(y_test, predicciones)
+
+print("\nExactitud del modelo:")
+print(exactitud)
+
+print("\nMatriz de confusión:")
+print(confusion_matrix(y_test, predicciones))
+
+print("\nReporte de clasificación:")
+print(classification_report(y_test, predicciones))
+
+comparacion = pd.DataFrame({
+    "Real": y_test.values,
+    "Predicción": predicciones
+})
+
+print("\nComparación de resultados:")
+print(comparacion)
+
+nuevos_clientes = pd.DataFrame({
+    "Compras_Mensuales": [1, 10, 18],
+    "Gasto_Mensual_MXN": [500, 12000, 25000],
+    "Visitas_Web_Mensuales": [2, 25, 50],
+    "Satisfaccion": [2.5, 4.2, 5.0]
+})
+
+nuevos_clientes_escalados = escalador.transform(nuevos_clientes)
+
+predicciones_nuevas = modelo.predict(nuevos_clientes_escalados)
+
+print("\nPredicciones para nuevos clientes:")
+print(predicciones_nuevas)
+
+plt.plot(modelo.loss_curve_)
+plt.xlabel("Iteraciones")
+plt.ylabel("Error o pérdida")
+plt.title("Proceso de aprendizaje de la red neuronal")
+plt.show()
+
+
+#Resultado
+
+Primeras filas del dataset:
+  ID_Cliente  Edad  Compras_Mensuales  Gasto_Mensual_MXN  \
+0      C0001    36                  5            9430.45   
+1      C0002    27                  7            8251.87   
+2      C0003    41                  6            6385.64   
+3      C0004    52                  5            5337.27   
+4      C0005    54                 16            9817.98   
+
+   Visitas_Web_Mensuales  Satisfaccion Nivel_Consumo_Referencia  
+0                      8           4.2                    medio  
+1                     15           4.4                    medio  
+2                     20           3.6                    medio  
+3                     17           3.9                    medio  
+4                     35           4.7                     alto  
+
+Exactitud del modelo:
+0.9777777777777777
+
+Matriz de confusión:
+[[ 7  0  0]
+ [ 0 17  0]
+ [ 0  1 20]]
+
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+        alto       1.00      1.00      1.00         7
+        bajo       0.94      1.00      0.97        17
+       medio       1.00      0.95      0.98        21
+
+    accuracy                           0.98        45
+   macro avg       0.98      0.98      0.98        45
+weighted avg       0.98      0.98      0.98        45
+
+
+Comparación de resultados:
+     Real Predicción
+0   medio      medio
+1    alto       alto
+2   medio      medio
+3   medio      medio
+4    alto       alto
+5   medio      medio
+6   medio      medio
+7   medio      medio
+8   medio      medio
+9    bajo       bajo
+10  medio      medio
+11  medio      medio
+12   alto       alto
+13   bajo       bajo
+14   alto       alto
+15   bajo       bajo
+16   bajo       bajo
+17   bajo       bajo
+18  medio      medio
+19  medio      medio
+20  medio      medio
+21   bajo       bajo
+22  medio      medio
+23   bajo       bajo
+24  medio      medio
+25   bajo       bajo
+26   bajo       bajo
+27   bajo       bajo
+28  medio      medio
+29   alto       alto
+30   bajo       bajo
+31  medio       bajo
+32   alto       alto
+33  medio      medio
+34   bajo       bajo
+35   bajo       bajo
+36   bajo       bajo
+37  medio      medio
+38   alto       alto
+39   bajo       bajo
+40  medio      medio
+41  medio      medio
+42  medio      medio
+43   bajo       bajo
+44   bajo       bajo
+
+Predicciones para nuevos clientes:
+['bajo' 'alto' 'alto']
+
+
+#Preguntas
+
+1.-¿Qué predicción obtuvo cada cliente?
+
+Cliente 1: Bajo
+
+Cliente 2: Alto
+
+Cliente 3: Alto
+
+2.-¿La predicción tiene sentido?
+
+Sí, porque: El Cliente 1 tiene características con poca actividad. Los Clientes 2 y 3 son los que presentan un mayor gasto.
+
+3.-¿Qué variable parece influir más?
+
+EL Gasto_Mensual_MXN porque los clientes con un gasto mayor tienden a clasificarse como consumidores de nivel alto.
+
+4.-¿Qué pasa si aumentas el gasto mensual?
+
+Es más probable que cambie la clasificación del cliente hacia un nivel de consumo más alto.
+
+5.-¿Qué pasa si disminuyes la satisfacción?
+
+Que elnivel de consumo puede bajar en algunos casos aunque normalmente eso no influye tanto.
