@@ -55,7 +55,6 @@ Victor Abraham Campos Sanchez
 - [Actividad 1.1](https://github.com/VICTORCS0/Ejercicios_MineriadeDatos/blob/main/M_codo.png)
 - [Actividad 2](https://github.com/VICTORCS0/Ejercicios_MineriadeDatos/blob/main/Act.2%20(3Parcial))
 - [Actividad 2.1](https://github.com/VICTORCS0/Ejercicios_MineriadeDatos/blob/main/image.png)
-- [Actividad 3]
 
 
 
